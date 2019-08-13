@@ -23,7 +23,7 @@ public class LdapService {
 
     public Boolean connect() {
 
-        String ldapHost = "192.168.99.101";
+        String ldapHost = "3.16.75.38";
         String dn = "cn=admin,dc=arqsoft,dc=unal,dc=edu,dc=co";
         String password = "admin";
 
