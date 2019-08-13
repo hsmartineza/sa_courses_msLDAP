@@ -33,11 +33,14 @@ public class LdapService {
         try {
             lc.connect(ldapHost, ldapPort);
             System.out.println("Connecting to LDAP Server...");
+            System.out.println(ldapHost);
+            System.out.println(ldapPort);  
             lc.bind(ldapVersion, dn, password.getBytes("UTF8"));
             System.out.println("Authenticated in LDAP Server...");
             return true;
         } catch (LDAPException | UnsupportedEncodingException ex) {
             System.out.println("ERROR when connecting to LDAP Server...");
+            ex.printStackTrace();
             return false;
         }
     }
